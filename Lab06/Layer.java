@@ -12,7 +12,7 @@ public class Layer {
     /**
      * constructor
      *
-     * @param shapes
+     * shapes
      */
     public Layer() {
     shapes = new ArrayList<Shape>();
@@ -61,17 +61,25 @@ public class Layer {
     }
 
     /**
-     * xóa tất cả các hình tâm giác
+     * xóa tất cả các hình tam giác
      */
     public void removeAllTriangle() {
-        this.shapes.removeIf(i -> (i instanceof Triangle));
+        for(int i = 0; i< shapes.size(); i++){
+            if(shapes.get(i) instanceof Triangle){
+                shapes.remove(i);
+            }
+        }
     }
 
     /**
      * xóa tất cả các hình tròn
      */
     public void removeAllCircle() {
-        this.shapes.removeIf(i -> (i instanceof Circle));
+        for(int i = 0; i< shapes.size(); i++) {
+            if (shapes.get(i) instanceof Circle) {
+                shapes.remove(i);
+            }
+        }
     }
 
     /**

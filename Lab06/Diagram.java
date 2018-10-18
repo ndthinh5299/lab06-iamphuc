@@ -1,5 +1,8 @@
 package Lab06;
 
+import Shape.Circle;
+import Shape.Shape;
+
 import java.util.ArrayList;
 
 public class Diagram {
@@ -7,7 +10,6 @@ public class Diagram {
 
     /**
      * constructor
-     * @param layers
      */
     public  Diagram(){
         layers  = new ArrayList<Layer>();
@@ -25,7 +27,7 @@ public class Diagram {
         return layers;
     }
 
-    public void setLayers(ArrayList<Layer> layers) {
+    public void setLayers(ArrayList<Layer> layers){
         this.layers = layers;
     }
 
@@ -40,8 +42,9 @@ public class Diagram {
      * xóa tất cả các hình tròn
      */
     public void removeAllCircle(){
-        for(Layer i : layers)
-            i.removeAllCircle();
+       for(int i=0; i< layers.size(); i++){
+           layers.get(i).removeAllCircle();
+       }
     }
 
     /**
