@@ -5,7 +5,10 @@ public class Circle extends Shape {
     private double radius;
     private final double PI = Math.PI;
 
-    //constructor
+    /**
+     * constructor
+     */
+
 
     public Circle(Point a, double radius) {
         this.a = a;
@@ -39,7 +42,10 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    // getter/setter
+    /**
+     * getter/setter
+      */
+
     public double getRadius() {
         return radius;
     }
@@ -51,22 +57,18 @@ public class Circle extends Shape {
     public double getPI() {
         return PI;
     }
+    /**
+     * Phương thức di chuyển hình tròn
+     */
+    public void moveTo(double x, double y){
+        a.move(x, y);
+    }
 
-    // tính diện tích hình tròn
 
     /**
-     *
-     * @return
-     */
-    public double getArea() {
-        return PI * radius * radius;
-    }
-    // tính chu vi hình tròn
-    public double getPerimeter() {
-        return 2 * PI * radius;
-    }
+     * Ghi đè phương thức toString
+      */
 
-    // Ghi đè phương thức toString
     public String toString() {
         return "Hình tròn có bán kính là: " + this.getRadius()
                 + " \t Tâm là:  " + a;

@@ -1,7 +1,6 @@
-package Shape;
-
 import Lab06.Diagram;
 import Lab06.Layer;
+import Shape.*;
 
 public class Main {
     public static void main(String[] args) {

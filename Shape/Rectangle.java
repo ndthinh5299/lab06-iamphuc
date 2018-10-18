@@ -2,6 +2,10 @@ package Shape;
 
 public class Rectangle extends Shape {  
     private Point a,b,c,d;
+
+    /**
+     * constuctor
+     */
     public Rectangle(Point a, Point b, Point c, Point d) {
         this.a = a;
         this.b = b;
@@ -17,6 +21,10 @@ public class Rectangle extends Shape {
         this.d = d;
     }
 
+    /**
+     * getter/setter
+     * @return
+     */
     public Point getA() {
         return a;
     }
@@ -48,6 +56,20 @@ public class Rectangle extends Shape {
     public void setD(Point d) {
         this.d = d;
     }
+    /**
+     * Phương thức di chuyển hình chữ nhật
+     */
+    public void move(double x, double y){
+        a.move(x,y);
+        b.move(x,y);
+        c.move(x,y);
+        d.move(x,y);
+    }
+
+    /**
+     * Ghi đè phương thức toString
+     * @return
+     */
     public String toString(){
         return  "Hình chữ nhật có 4 đỉnh là: " + a+ b+ c+ d
                 + "\t màu sắc: "  + super.getColor();

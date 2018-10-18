@@ -4,6 +4,9 @@ public class Shape {
     private String Color;
     private boolean Filled;
 
+    /**
+     * constuctor
+     */
     public Shape(){
         this.Color = "red";
         this.Filled = true;
@@ -13,7 +16,10 @@ public class Shape {
         this.Filled = filled;
     }
 
-    // getter/setter
+    /**
+     *  getter/setter
+      */
+
     public String getColor() {
         return Color;
     }
@@ -30,7 +36,11 @@ public class Shape {
         this.Filled = filled;
     }
 
-    // Ghi đè phương thức toString
+    /**
+     *  Ghi đè phương thức toString
+      */
+
+
     public String toString(){
         return "hình có màu: " + this.getColor();
     }
